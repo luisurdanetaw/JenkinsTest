@@ -1,15 +1,10 @@
-pipeline {
-
-agent any
-
-stages{
-    stage("build"){
-    steps{
-        sh 'mvn -v'
+pipeline{
+    agent any
+    stages{
+        stage("Build"){
+            steps{
+                bat 'mvn -v'
+            }
         }
     }
-}
-
-
-
 }
